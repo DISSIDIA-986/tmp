@@ -1,0 +1,1036 @@
+nohup: ignoring input
+
+            _ _ _
+           | (_) |
+  _ __ __ _| |_| |_ ___
+ | '__/ _  | | | __/ _ \   The lightweight, distributed
+ | | | (_| | | | ||  __/   relational database.
+ |_|  \__, |_|_|\__\___|
+         | |               www.rqlite.com
+         |_|
+
+[rqlited] 2021/09/08 10:33:22 rqlited starting, version v6.4.2, commit e9270db490b86bbdfcf2856d31f6b2ad197bdf2e, branch master
+[rqlited] 2021/09/08 10:33:22 go1.16, target architecture is amd64, operating system target is linux
+[rqlited] 2021/09/08 10:33:22 launch command: /data/rqlite-v6.4.2-linux-amd64/rqlited -on-disk -on-disk-path /mnt/ramdisk/rqlite.1 /root/node.1
+[rqlited] 2021/09/08 10:33:22 Raft TCP mux Listener registered with 1
+[rqlited] 2021/09/08 10:33:22 preexisting node state detected in /root/node.1
+[rqlited] 2021/09/08 10:33:22 no join addresses set
+[store] 2021/09/08 10:33:22 opening store with node ID localhost:4002
+[store] 2021/09/08 10:33:22 configured for an on-disk database at /mnt/ramdisk/rqlite.1
+[store] 2021/09/08 10:33:22 ensuring directory at /root/node.1 exists
+[mux] 2021/09/08 10:33:22 mux serving on 127.0.0.1:4002, advertising 127.0.0.1:4002
+[store] 2021/09/08 10:33:22 2 preexisting snapshots present
+[store] 2021/09/08 10:33:22 first log index: 626960, last log index: 640549, last command log index: 640549:
+[store] 2021/09/08 10:33:22 created in-memory database at open
+[store] 2021/09/08 10:33:40 node restored in 14.665438167s
+2021-09-08T10:33:40.329+0800 [INFO]  raft: restored from snapshot: id=2-632667-1631027190206
+2021-09-08T10:33:45.023+0800 [INFO]  raft: initial configuration: index=4 servers="[{Suffrage:Voter ID:localhost:4002 Address:127.0.0.1:4002} {Suffrage:Voter ID:2 Address:127.0.0.1:4004} {Suffrage:Voter ID:3 Address:127.0.0.1:4006}]"
+[store] 2021/09/08 10:33:45 no cluster bootstrap requested
+[cluster] 2021/09/08 10:33:45 service listening on 127.0.0.1:4002
+[rqlited] 2021/09/08 10:33:45 Cluster TCP mux Listener registered with 2
+2021-09-08T10:33:45.023+0800 [INFO]  raft: entering follower state: follower="Node at 127.0.0.1:4002 [Follower]" leader=
+[store] 2021/09/08 10:33:45 waiting for up to 2m0s for application of initial logs (lcIdx=640549)
+[store] 2021/09/08 10:33:45 waiting for up to 2m0s for application of initial logs
+[rqlited] 2021/09/08 10:33:45 store has reached consensus
+[http] 2021/09/08 10:33:45 service listening on 127.0.0.1:4001
+[rqlited] 2021/09/08 10:33:45 node is ready
+[store] 2021/09/08 10:33:47 7882 committed log entries applied in 2.854283704s, took 25.196559256s since open
+[store] 2021/09/08 10:33:52 successfully switched to on-disk database
+[store] 2021/09/08 15:12:40 node snapshot created in 3.849741016s
+2021-09-08T15:12:40.894+0800 [INFO]  raft: starting snapshot up to: index=641849
+2021-09-08T15:12:40.894+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/4-641849-1631085160894.tmp
+2021-09-08T15:14:10.666+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/2-623769-1631027022869
+[store] 2021/09/08 15:14:10 snapshot and persist took 1m33.624971728s
+2021-09-08T15:14:10.669+0800 [INFO]  raft: compacting logs: from=626960 to=637316
+2021-09-08T15:14:13.481+0800 [INFO]  raft: snapshot complete up to: index=641849
+2021-09-08T15:15:02.162+0800 [ERROR] raft-net: failed to decode incoming command: error="read tcp 127.0.0.1:4002->127.0.0.1:58146: read: connection reset by peer"
+2021-09-08T15:15:03.739+0800 [WARN]  raft: heartbeat timeout reached, starting election: last-leader=127.0.0.1:4006
+2021-09-08T15:15:03.739+0800 [INFO]  raft: entering candidate state: node="Node at 127.0.0.1:4002 [Candidate]" term=5
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:03 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+2021-09-08T15:15:04.664+0800 [ERROR] raft: failed to make requestVote RPC: target="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:04.668+0800 [INFO]  raft: duplicate requestVote for same term: term=5
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:04 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+2021-09-08T15:15:05.823+0800 [WARN]  raft: Election timeout reached, restarting election
+2021-09-08T15:15:05.823+0800 [INFO]  raft: entering candidate state: node="Node at 127.0.0.1:4002 [Candidate]" term=6
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+2021-09-08T15:15:05.874+0800 [ERROR] raft: failed to make requestVote RPC: target="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[rqlited] 2021/09/08 15:15:05 http: superfluous response.WriteHeader call from github.com/rqlite/rqlite/http.(*Service).writeResponse (service.go:1073)
+2021-09-08T15:15:05.879+0800 [INFO]  raft: election won: tally=2
+2021-09-08T15:15:05.879+0800 [INFO]  raft: entering leader state: leader="Node at 127.0.0.1:4002 [Leader]"
+2021-09-08T15:15:05.879+0800 [INFO]  raft: added peer, starting replication: peer=2
+2021-09-08T15:15:05.879+0800 [INFO]  raft: added peer, starting replication: peer=3
+2021-09-08T15:15:05.879+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:05.879+0800 [WARN]  raft: appendEntries rejected, sending older logs: peer="{Voter 2 127.0.0.1:4004}" next=650339
+2021-09-08T15:15:05.885+0800 [INFO]  raft: pipelining replication: peer="{Voter 2 127.0.0.1:4004}"
+2021-09-08T15:15:05.892+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:05.902+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:05.983+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.021+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.024+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.105+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.221+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.267+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.381+0800 [WARN]  raft: failed to contact: server-id=3 time=502.549445ms
+2021-09-08T15:15:06.431+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.587+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.645+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.864+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:06.881+0800 [WARN]  raft: failed to contact: server-id=3 time=1.001931601s
+2021-09-08T15:15:07.084+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:07.228+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:07.370+0800 [WARN]  raft: failed to contact: server-id=3 time=1.491558701s
+2021-09-08T15:15:07.442+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:07.937+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:08.508+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:08.777+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:10.248+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:11.069+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:12.935+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:15:14 node snapshot created in 2.415406233s
+2021-09-08T15:15:14.356+0800 [INFO]  raft: starting snapshot up to: index=650772
+2021-09-08T15:15:14.356+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-650772-1631085314356.tmp
+2021-09-08T15:15:16.190+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:18.181+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:26.432+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:28.578+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:36.673+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:39.004+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:46.914+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:49.435+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:57.155+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:15:59.787+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:07.396+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:10.136+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:17.638+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:20.508+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:27.880+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:30.909+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:38.121+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:41.316+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:42.509+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/2-632667-1631027190206
+[store] 2021/09/08 15:16:42 snapshot and persist took 1m30.57152122s
+2021-09-08T15:16:42.512+0800 [INFO]  raft: compacting logs: from=637317 to=645749
+2021-09-08T15:16:45.307+0800 [INFO]  raft: snapshot complete up to: index=650772
+2021-09-08T15:16:48.362+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:51.731+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:16:58.603+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:02.109+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:08.844+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:12.503+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:19.085+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:22.884+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:29.327+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:33.226+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:39.569+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:43.614+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:49.810+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:17:53.957+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:00.051+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:04.317+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:10.293+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:14.749+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:18:17 node snapshot created in 2.332079487s
+2021-09-08T15:18:17.614+0800 [INFO]  raft: starting snapshot up to: index=661107
+2021-09-08T15:18:17.615+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-661107-1631085497615.tmp
+2021-09-08T15:18:20.534+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:25.096+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:30.776+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:35.530+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:41.018+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:45.931+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:51.259+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:18:56.312+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:01.500+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:06.709+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:11.741+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:17.074+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:21.983+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:27.471+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:32.224+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:37.898+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:42.465+0800 [ERROR] raft: failed to appendEntries to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:45.824+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/4-641849-1631085160894
+[store] 2021/09/08 15:19:45 snapshot and persist took 1m30.545478648s
+2021-09-08T15:19:45.827+0800 [INFO]  raft: compacting logs: from=645750 to=655547
+2021-09-08T15:19:47.166+0800 [INFO]  raft: snapshot complete up to: index=661107
+2021-09-08T15:19:48.239+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:52.706+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:19:53.044+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:53.044+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:19:58.662+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:03.285+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:20:03.612+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:03.612+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:09.008+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:13.853+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:20:14.192+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:14.192+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:19.362+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:24.432+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:20:24.773+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:24.773+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:29.719+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:35.014+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:20:35.352+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:35.352+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:40.158+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:45.593+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:20:45.932+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:45.932+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:50.540+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:56.172+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:20:56.511+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:20:56.511+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:00.937+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:06.752+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:21:07.097+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:07.097+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:11.361+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:17.338+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:21:17.696+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:17.696+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:21:20 node snapshot created in 2.406571053s
+2021-09-08T15:21:20.103+0800 [INFO]  raft: starting snapshot up to: index=670823
+2021-09-08T15:21:20.103+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-670823-1631085680103.tmp
+2021-09-08T15:21:21.778+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:27.937+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:21:27.937+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:21:28.275+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:28.275+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:32.137+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:38.516+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:21:38.516+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:21:38.852+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:38.853+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:42.537+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:49.093+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:21:49.093+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:21:49.427+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:49.428+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:52.921+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:21:59.668+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:21:59.668+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:22:00.003+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:00.003+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:03.320+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:10.243+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:22:10.243+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:22:10.579+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:10.579+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:13.745+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:20.820+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:22:20.820+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:22:21.174+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:21.174+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:24.140+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:31.415+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:22:31.415+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:22:31.749+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:31.749+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:34.490+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:41.989+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:22:41.989+0800 [WARN]  snapshot: found temporary snapshot: name=6-670823-1631085680103.tmp
+2021-09-08T15:22:42.322+0800 [ERROR] raft: failed to install snapshot: id=6-661107-1631085497615 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:42.322+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:44.900+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:48.892+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/6-650772-1631085314356
+[store] 2021/09/08 15:22:48 snapshot and persist took 1m31.252901765s
+2021-09-08T15:22:48.949+0800 [INFO]  raft: compacting logs: from=655548 to=665675
+2021-09-08T15:22:48.974+0800 [INFO]  raft: snapshot complete up to: index=670823
+2021-09-08T15:22:52.563+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:22:52.909+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:52.909+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:22:55.289+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:03.150+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:23:03.483+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:03.483+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:05.700+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:13.723+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:23:14.065+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:14.065+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:16.138+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:24.306+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:23:24.648+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:24.648+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:26.568+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:34.889+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:23:35.236+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:35.236+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:36.965+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:45.477+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:23:45.823+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:45.823+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:47.398+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:23:49 node snapshot created in 2.391381348s
+2021-09-08T15:23:49.842+0800 [INFO]  raft: starting snapshot up to: index=679505
+2021-09-08T15:23:49.842+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-679505-1631085829842.tmp
+2021-09-08T15:23:56.064+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:23:56.064+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:23:56.399+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:56.399+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:23:57.757+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:06.639+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:24:06.639+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:24:06.972+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:06.972+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:08.106+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:17.212+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:24:17.213+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:24:17.551+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:17.551+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:18.468+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:27.791+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:24:27.792+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:24:28.133+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:28.133+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:28.884+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:38.374+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:24:38.374+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:24:38.713+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:38.713+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:39.308+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:48.953+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:24:48.953+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:24:49.292+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:49.292+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:49.743+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:59.532+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:24:59.532+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:24:59.871+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:24:59.871+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:00.177+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:10.111+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:25:10.111+0800 [WARN]  snapshot: found temporary snapshot: name=6-679505-1631085829842.tmp
+2021-09-08T15:25:10.448+0800 [ERROR] raft: failed to install snapshot: id=6-670823-1631085680103 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:10.448+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:10.599+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:18.016+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/6-661107-1631085497615
+[store] 2021/09/08 15:25:18 snapshot and persist took 1m30.625155645s
+2021-09-08T15:25:18.075+0800 [INFO]  raft: compacting logs: from=665676 to=674426
+2021-09-08T15:25:18.224+0800 [INFO]  raft: snapshot complete up to: index=679505
+2021-09-08T15:25:20.689+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:25:20.980+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:21.038+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:21.038+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:31.278+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:25:31.410+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:31.616+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:31.616+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:41.756+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:41.857+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:25:42.191+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:42.191+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:52.104+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:52.431+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:25:52.774+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:25:52.774+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:02.533+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:03.014+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:26:03.359+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:03.359+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:12.915+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:13.599+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:26:13.936+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:13.936+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:26:15 node snapshot created in 4.064290284s
+2021-09-08T15:26:15.142+0800 [INFO]  raft: starting snapshot up to: index=687718
+2021-09-08T15:26:15.142+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-687718-1631085975142.tmp
+2021-09-08T15:26:23.310+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:24.176+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:26:24.176+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:26:24.513+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:24.513+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:33.747+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:34.753+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:26:34.753+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:26:35.105+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:35.105+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:44.176+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:45.346+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:26:45.346+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:26:45.706+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:45.706+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:54.534+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:55.947+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:26:55.947+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:26:56.282+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:26:56.282+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:04.948+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:06.524+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:27:06.524+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:27:06.864+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:06.864+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:15.378+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:17.104+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:27:17.104+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:27:17.448+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:17.448+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:25.806+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:27.689+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:27:27.689+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:27:28.026+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:28.027+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:36.220+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:38.268+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:27:38.268+0800 [WARN]  snapshot: found temporary snapshot: name=6-687718-1631085975142.tmp
+2021-09-08T15:27:38.610+0800 [ERROR] raft: failed to install snapshot: id=6-679505-1631085829842 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:38.611+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:43.321+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/6-670823-1631085680103
+[store] 2021/09/08 15:27:43 snapshot and persist took 1m32.310138689s
+2021-09-08T15:27:43.387+0800 [INFO]  raft: compacting logs: from=674427 to=682499
+2021-09-08T15:27:44.635+0800 [INFO]  raft: snapshot complete up to: index=687718
+2021-09-08T15:27:46.636+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:48.851+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:27:49.202+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:49.202+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:57.063+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:59.443+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:27:59.789+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:27:59.789+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:07.438+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:10.030+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:28:10.381+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:10.381+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:17.879+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:20.622+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:28:20.989+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:20.989+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:28.271+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:31.230+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:28:31.566+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:31.566+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:38.654+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:41.807+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:28:42.152+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:42.152+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:49.068+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:52.392+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:28:52.740+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:52.740+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:28:59.453+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:02.981+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:29:03.328+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:03.328+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:29:06 node snapshot created in 2.390481104s
+2021-09-08T15:29:06.566+0800 [INFO]  raft: starting snapshot up to: index=697405
+2021-09-08T15:29:06.567+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-697405-1631086146567.tmp
+2021-09-08T15:29:09.846+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:13.568+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:29:13.568+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:29:13.907+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:13.907+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:20.221+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:24.147+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:29:24.147+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:29:24.486+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:24.486+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:30.643+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:34.726+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:29:34.726+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:29:35.066+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:35.066+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:41.011+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:45.307+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:29:45.307+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:29:45.641+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:45.641+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:51.401+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:55.882+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:29:55.882+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:29:56.219+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:29:56.219+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:01.823+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:06.459+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:30:06.460+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:30:06.800+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:06.800+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:12.175+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:17.041+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:30:17.041+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:30:17.401+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:17.401+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:22.570+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:27.641+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:30:27.642+0800 [WARN]  snapshot: found temporary snapshot: name=6-697405-1631086146567.tmp
+2021-09-08T15:30:27.988+0800 [ERROR] raft: failed to install snapshot: id=6-687718-1631085975142 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:27.988+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:32.966+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:34.476+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/6-679505-1631085829842
+[store] 2021/09/08 15:30:34 snapshot and persist took 1m30.36847123s
+2021-09-08T15:30:34.544+0800 [INFO]  raft: compacting logs: from=682500 to=692237
+2021-09-08T15:30:35.284+0800 [INFO]  raft: snapshot complete up to: index=697405
+2021-09-08T15:30:38.228+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:30:38.593+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:38.593+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:43.310+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:48.833+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:30:49.202+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:49.202+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:53.707+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:59.442+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:30:59.804+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:30:59.804+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:04.086+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:10.045+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:31:10.389+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:10.389+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:14.488+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:20.630+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:31:20.977+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:20.977+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:24.872+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:31.218+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:31:31.570+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:31.570+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+[store] 2021/09/08 15:31:34 node snapshot created in 4.778344569s
+2021-09-08T15:31:34.885+0800 [INFO]  raft: starting snapshot up to: index=705765
+2021-09-08T15:31:34.885+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-705765-1631086294885.tmp
+2021-09-08T15:31:35.276+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:41.810+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:31:41.813+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:31:44.831+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:44.831+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:45.632+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:55.071+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:31:55.071+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:31:55.451+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:55.451+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:31:56.030+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:05.691+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:32:05.691+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:32:06.067+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:06.067+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:06.409+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:16.308+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:32:16.308+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:32:16.644+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:16.644+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:16.765+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:26.884+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:32:26.884+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:32:27.181+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:27.225+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:27.225+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:37.465+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:32:37.465+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:32:37.565+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:37.807+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:37.807+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:47.997+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:48.047+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:32:48.047+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:32:48.391+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:48.391+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:58.350+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:58.631+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:32:58.631+0800 [WARN]  snapshot: found temporary snapshot: name=6-705765-1631086294885.tmp
+2021-09-08T15:32:58.971+0800 [ERROR] raft: failed to install snapshot: id=6-697405-1631086146567 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:32:58.971+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:03.813+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/6-687718-1631085975142
+[store] 2021/09/08 15:33:03 snapshot and persist took 1m33.713595541s
+2021-09-08T15:33:03.820+0800 [INFO]  raft: compacting logs: from=692238 to=700094
+2021-09-08T15:33:06.594+0800 [INFO]  raft: snapshot complete up to: index=705765
+2021-09-08T15:33:08.790+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:09.211+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:33:09.574+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:09.574+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:19.230+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:19.815+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:33:20.174+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:20.174+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:29.586+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:30.415+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:33:30.759+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:30.759+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:39.951+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:41.000+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:33:41.358+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:41.358+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:50.337+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:51.599+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:33:51.953+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:33:51.953+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:00.746+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:02.193+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:34:02.582+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:02.582+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:11.173+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:12.824+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:34:13.175+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:13.175+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:21.571+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:23.416+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+[store] 2021/09/08 15:34:24 node snapshot created in 5.640216793s
+2021-09-08T15:34:24.119+0800 [INFO]  raft: starting snapshot up to: index=714683
+2021-09-08T15:34:24.119+0800 [INFO]  snapshot: creating new snapshot: path=/root/node.1/snapshots/6-714683-1631086464119.tmp
+2021-09-08T15:34:24.847+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:24.847+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:32.002+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:35.088+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:34:35.088+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:34:35.452+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:35.452+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:42.364+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:45.693+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:34:45.693+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:34:46.040+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:46.040+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:52.735+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:56.280+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:34:56.281+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:34:56.629+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:34:56.629+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:03.167+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:06.869+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:35:06.869+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:35:07.216+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:07.216+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:13.510+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:17.457+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:35:17.457+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:35:17.802+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:17.802+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:23.942+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:28.042+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:35:28.042+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:35:28.389+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:28.389+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:34.366+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:38.629+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:35:38.629+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:35:38.978+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:38.978+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:44.743+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:49.219+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:35:49.219+0800 [WARN]  snapshot: found temporary snapshot: name=6-714683-1631086464119.tmp
+2021-09-08T15:35:49.565+0800 [ERROR] raft: failed to install snapshot: id=6-705765-1631086294885 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:49.565+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:55.182+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:35:59.490+0800 [INFO]  snapshot: reaping snapshot: path=/root/node.1/snapshots/6-697405-1631086146567
+[store] 2021/09/08 15:35:59 snapshot and persist took 1m41.020284742s
+2021-09-08T15:35:59.499+0800 [INFO]  raft: compacting logs: from=700095 to=709501
+2021-09-08T15:35:59.805+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:36:00.182+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:00.182+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:02.841+0800 [INFO]  raft: snapshot complete up to: index=714683
+2021-09-08T15:36:05.583+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:10.423+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:36:11.729+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:11.731+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:15.927+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:21.971+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:36:22.342+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:22.342+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:26.302+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:32.582+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:36:32.959+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:32.959+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:36.681+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:43.200+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:36:43.591+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:43.591+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:47.052+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:53.832+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:36:54.206+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:54.206+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:36:57.481+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:04.446+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:37:04.837+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:04.837+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:07.911+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:15.078+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:37:15.452+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:15.453+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:18.339+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:25.693+0800 [ERROR] raft: failed to get log: index=650397 error="log not found"
+2021-09-08T15:37:26.071+0800 [ERROR] raft: failed to install snapshot: id=6-714683-1631086464119 error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:26.071+0800 [ERROR] raft: failed to send snapshot to: peer="{Voter 3 127.0.0.1:4006}" error="dial tcp 127.0.0.1:4006: connect: connection refused"
+2021-09-08T15:37:29.297+0800 [ERROR] raft: failed to heartbeat to: peer=127.0.0.1:4006 error="dial tcp 127.0.0.1:4006: connect: connection refused"
