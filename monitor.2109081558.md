@@ -3,7 +3,23 @@ ncdu /mnt/ramdisk
     1.8 GiB [ 35.4%]  rqlite.2
     1.8 GiB [ 35.4%]  rqlite.1
     1.5 GiB [ 29.1%]  rqlite.3
-```    
+```
+ncdu /root/node.1
+```bash
+  713.0 MiB [ 87.4%] /snapshots
+  102.7 MiB [ 12.6%]  raft.db
+```
+ncdu /root/node.2
+```bash
+  740.4 MiB [ 86.1%] /snapshots
+  119.3 MiB [ 13.9%]  raft.db
+```
+ncdu /root/node.3
+```bash
+  661.2 MiB [ 86.4%] /snapshots
+  103.7 MiB [ 13.6%]  raft.db
+```
+
 ![image](https://user-images.githubusercontent.com/7844261/132470085-7f14d485-7243-46f0-b686-93dd14f04a2c.png)
 
 less +?rqlite /var/log/messages
